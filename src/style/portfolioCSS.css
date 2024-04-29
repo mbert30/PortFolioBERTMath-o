@@ -1,0 +1,196 @@
+/*--- light/dark Mode---*/
+
+html {
+  --background_color: #e4e4e4;
+  --color: #241834;
+  --navbar_background_color_transparent: rgba(73, 47, 89, 0.85);
+  --navbar_background_color_solid: #492f59;
+  --color_navBar: #DABBEA;
+}
+
+html.dark {
+  --background_color: #473c47;
+  --color: #dcdcdc;
+  --navbar_background_color_transparent: rgba(91, 82, 91, 0.50);
+  --navbar_background_color_solid: #5b525b;
+  --color_navBar: #dcdcdc;
+}
+
+/*--- Bouton light/dark Mode ---*/
+
+.div_darkMode {
+  padding: 10px;
+}
+
+input[type="checkbox"].button_darkMode {
+  display: none;
+}
+input[type="checkbox"].button_darkMode + label {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 3rem;
+  height: 1.5rem;
+  border-radius: 1.5rem;
+  padding:2px;
+  background-color: #ab9cb2;
+  transition: all 0.5s ;
+}
+input[type="checkbox"].button_darkMode + label::before {
+  box-sizing: border-box;
+  display: block;
+  content: "";
+  height: calc(1.5rem - 4px);
+  width: calc(1.5rem - 4px);
+  border-radius: 50%;
+  background-color: #492f59;
+  transition: all 0.5s ;
+}
+input[type="checkbox"].button_darkMode:checked + label {
+  background-color: #ab9cb2;
+}
+input[type="checkbox"].button_darkMode:checked + label::before {
+  margin-left: 1.5rem;
+}
+
+/*--- Bouton langue ---*/
+
+.img_flag {
+  width: 45px;
+}
+
+.button_flag {
+  border: none;
+  background-color: transparent;
+}
+
+.div_langue {
+  border-left: solid 1px;
+  border-color: #241834;
+}
+
+/*--- navbar principal ---*/
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+.navbar a {
+  color: var(--color_navBar);
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.nav_logo {
+  width: 60px;
+}
+
+.navbar_liste {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 25px;
+}
+
+.navbar_pages {
+  display: flex;
+}
+
+.navbar_button {
+  display: flex;
+  align-items: center;
+}
+
+.navbar.solid {
+  background-color: var(--navbar_background_color_solid);
+}
+
+.navbar.transparent {
+  background-color: var(--navbar_background_color_transparent);
+  backdrop-filter: blur(6.6px);
+}
+
+/*--- Body ---*/
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--background_color);
+}
+
+.body {
+  padding: 100px 10px 10px;
+  color: var(--color);
+  min-height: calc(100vh - 160px);
+}
+
+/*--- Header ---*/
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+/*--- Footer ---*/
+
+.footer {
+  background-color: var(--navbar_background_color_solid);
+  color: var(--color_navBar);
+  font-size: 17px;
+  padding: 14px 16px;
+  text-decoration: none;
+  position: relative;
+
+}
+
+.footerMain {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*--- BlogCard ---*/
+
+.blogCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: auto;
+  min-width: 360px;
+  max-width: 480px;
+  height: auto;
+  background: #f5f5f5;
+  color: #272727;
+  padding: 50px;
+  margin-bottom: 20px;
+  box-shadow: 0px 7px 24px rgba(100, 100, 100, 0.4);
+}
+
+.cardUser {
+  display: flex;
+  flex-direction: row;
+  padding-top: 24px;
+  margin-top: 12px;
+  border-top: 1px solid #c1c1c1;
+  align-items: center;
+}
+
+.cardUserImage {
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.userImage {
+  width: 42px;
+  height: 42px;
+}
