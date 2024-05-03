@@ -6,13 +6,13 @@ function DarkMode() {
     const changeMode = () => {
         if(document.getElementById('button_darkMode').checked) {
             document.documentElement.classList.add('dark');
-            setSource('DarkModeLogo_Dark.png')
+            setSource('/DarkModeLogo_Dark.png')
         } else {
             document.documentElement.classList.remove('dark');
-            setSource('DarkModeLogo_Dark.png')
+            setSource('/DarkModeLogo_Dark.png')
         }
     }
-    const [source, setSource] = useState('DarkModeLogo_Dark.png')
+    const [source, setSource] = useState('/DarkModeLogo_Dark.png')
 
     return (
         <>

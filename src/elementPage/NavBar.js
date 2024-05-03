@@ -24,12 +24,12 @@ function NavBar({text, setText}) {
     return (
         <>
             <nav className={`navbar ${navbarColor}`}>
-                <a href="/"><img className="nav_logo" src="logo.webp" alt={'Logo'}></img></a>
+                <a href="/"><img className="nav_logo" src="/logo.webp" alt={'Logo'}></img></a>
                 <div className="navbar_liste">
                     <div className="navbar_pages">
                         <a href="/">{text.navBar1}</a>
-                        <a href="#mon-parcours">{text.navBar2}</a>
-                        <a href="#mes-experiences">{text.navBar3}</a>
+                        <a href="/MonParcour">{text.navBar2}</a>
+                        <a href="/MesExperiences">{text.navBar3}</a>
                         <a href="/contact">{text.navBar4}</a>
                         <a href="/blog">{text.navBar5}</a>
                     </div>

@@ -7,11 +7,10 @@ import BlogCard from "../elementPage/BlogCard";
 function Blog({text, setText})  {
     const [listPost, setlistPost] = useState([])
     if(listPost.length===0){
-        fetch('https://dummyjson.com/posts')
+        fetch('https://dummyjson.com/posts?limit=10&skip=10&select=title,id,body,userId')
             .then(response => response.json())
             .then(result => {
                 // listPost = result
-                console.log(result.posts)
                 setlistPost(result.posts)
             })
             .catch(error => {
@@ -33,13 +32,12 @@ function Blog({text, setText})  {
                                     if(list!==undefined){
                                         console.log(list.title)
                                         return(<>
-                                            <BlogCard titre={list.title} body={list.body} userID={list.userID}/>
+                                            <BlogCard id={list.id} titre={list.title} body={list.body} userID={list.userID}/>
                                         </>)}
                                     else {return}
                                 })
                             }
                     </div>
-
                 </div>
             </div>
             <Footer/>
